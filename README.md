@@ -48,7 +48,7 @@ Utility to call DB2 preprocessor.
 ```
 ### Dependencies
  - [bash].
- - [mktemp]
+ - [mktemp].
 
 ## Examples
 Example:
