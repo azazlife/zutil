@@ -7,6 +7,7 @@ Utility to perform DB2 bind in USS.
 ### Dependencies
  - [IBM DB2 JDBC driver] and license.
  - [Rhino].
+
 ### Examples
 Example:
 ```text
