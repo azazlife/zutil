@@ -56,6 +56,28 @@ Example:
 $ db2prep.sh -i"input source file" -o"output source file" -d"output DBRMLIB data set" -p"preprocessor options" -l"DB2 STEPLIB" -s"output listing file"
 ```
 
+## dsect.sh
+### Overview
+Utility to convert HLASM DSECT structures to C/C++ headers.
+## Command line arguments
+```text
+-h                             print this help and exit.
+-i  INPUT-FILE                 input assembler file.
+-o  OUTPUT-FILE                output header file.
+-l  OUTPUT-LISTING             output listing file.
+-m  MACLIB                     assembly MACLIB.
+-d  DSECT-CONVERSION-OPTIONS   DSECT conversion utility options.
+```
+### Dependencies
+ - [bash].
+ - [mktemp].
+
+## Examples
+Example:
+```sh
+$ dsect.sh -i"input assembler file" -o"output header file" -l"output listing file" -m"assembler MACLIB"
+```
+
 [IBM DB2 JDBC driver]:http://www-01.ibm.com/support/docview.wss?uid=swg21363866
 [Rhino]:https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
 [bash]:http://www.rocketsoftware.com/ported-tools/bash-4253
