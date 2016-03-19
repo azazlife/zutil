@@ -133,7 +133,8 @@ function callDB2Preprocessor {
     if [[ "$preprocessorOptions" == *"HOST(CPP)"* ]]; then # if it's a C/C++ source code
         printf "preparing '%s' source file\n" "$inputFile"
         formatterOutput=`mktemp` # create temporary output formatter file
-        cat "$inputFile" | formatSourceCode 72 >"$formatterOutput" # format input source code to accommodate 72 characters line width restriction
+        # format input source code to accommodate 72 characters line width restriction
+        cat "$inputFile" | formatSourceCode 72 >"$formatterOutput"
         cp "$formatterOutput" "//'$temporarySYSIN'" # copy formatter output to the temporary SYSIN
         rm "$formatterOutput" # remove temporary formatter output
     else
