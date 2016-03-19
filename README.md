@@ -28,7 +28,7 @@ Utility to perform DB2 bind in USS.
 
 ### Examples
 Example:
-```text
+```sh
 $ JS='java -cp db2jcc.jar:db2jcc_license_cisuz.jar:rhino.jar org.mozilla.javascript.tools.shell.Main'
 $ $JS -p'DB2 port' -l'DB2 location' -a'DB2 password' -i'DSN commands file' -d'DBRMLIB'
 ```
