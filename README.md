@@ -47,7 +47,8 @@ Utility to call DB2 preprocessor.
 -p  OPTIONS         preprocessor options.
 ```
 ### Dependencies
- - [Bash].
+ - [bash].
+ - [mktemp]
 
 ## Examples
 Example:
@@ -57,4 +58,5 @@ $ db2prep.sh -i"input source file" -o"output source file" -d"output DBRMLIB data
 
 [IBM DB2 JDBC driver]:http://www-01.ibm.com/support/docview.wss?uid=swg21363866
 [Rhino]:https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
-[Bash]:http://www.rocketsoftware.com/ported-tools/bash-4253
+[bash]:http://www.rocketsoftware.com/ported-tools/bash-4253
+[mktemp]:https://www.rocketsoftware.com/ported-tools/mktemp-17
