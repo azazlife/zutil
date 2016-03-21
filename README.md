@@ -78,6 +78,15 @@ Example:
 $ dsect.sh -i"input assembler file" -o"output header file" -l"output listing file" -m"assembler MACLIB"
 ```
 
+## asmlist.awk
+### Overview
+Utility to generate makefile dependencies from HLASM listing.
+## Examples
+Example:
+```sh
+cat "input assembler listing file" | awk -f"asmlist.awk"
+```
+
 [IBM DB2 JDBC driver]:http://www-01.ibm.com/support/docview.wss?uid=swg21363866
 [Rhino]:https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
 [bash]:http://www.rocketsoftware.com/ported-tools/bash-4253
