@@ -1,4 +1,4 @@
-#/bin/env bash
+#!/bin/env bash
 
 # Copyright (C) Vadim Shchukin (vsshchukin@gmail.com) 2016
 # 
