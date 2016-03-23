@@ -272,8 +272,8 @@ Application.prototype.printResultSetAsCSV = function(resultSet) {
     }
 
     if (this.parameters.printTableColumns) {
+        var outputLine = '';
         for (var columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
-            var outputLine = '';
             if (columnIndex > 1) {
                 outputLine += delimiter;
             }
