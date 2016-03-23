@@ -30,7 +30,41 @@ Utility to perform DB2 bind in USS.
 Example:
 ```sh
 $ JS='java -cp db2jcc.jar:db2jcc_license_cisuz.jar:rhino.jar org.mozilla.javascript.tools.shell.Main'
-$ $JS -p'DB2 port' -l'DB2 location' -a'DB2 password' -i'DSN commands file' -d'DBRMLIB'
+$ $JS db2bind.js -p'DB2 port' -l'DB2 location' -a'DB2 password' -i'DSN commands file' -d'DBRMLIB'
+```
+
+## sql.js
+### Overview
+SQL JDBC command line client for DB2 for z/OS. Support data exporting in CSV format.
+### Dependencies
+ - [IBM DB2 JDBC driver] and license.
+ - [Rhino].
+
+### Command line arguments
+```text
+-h,          --help                     print this help and exit.
+-s HOSTNAME, --hostname=HOSTNAME        subsystem hostname. If not specified
+                                        then 'localhost' will be used.
+-p PORT,     --port=PORT                subsystem port.
+-l LOCATION, --location=LOCATION        subsystem location.
+-u USERNAME, --username=USERNAME        DB2 username. If not specified then
+                                        current user account name will be used.
+-a PASSWORD, --password=PASSWORD        DB2 password.
+-i INPUT,    --input-file=INPUT         input file containing SQL statements.
+                                        If not specified then SQL statements
+                                        would be read from the standard input.
+-v,          --verbose                  enable verbose mode.
+-t,          --print-table-name         print table name.
+-c,          --print-table-columns      print table columns.
+-x,          --format-as-csv            use CSV format.
+-d,          --csv-delimiter=DELIMITER  CSV delimiter. If not specified then "," will be used.
+```
+
+### Examples
+Example:
+```sh
+$ JS='java -cp db2jcc.jar:db2jcc_license_cisuz.jar:rhino.jar org.mozilla.javascript.tools.shell.Main'
+$ echo "SELECT 'TEST' FROM SYSIBM.SYSDUMMY1" | $JS sql.js -p'DB2 port' -l'DB2 location' -a'DB2 password' -v -t -c
 ```
 
 ## db2prep.sh
