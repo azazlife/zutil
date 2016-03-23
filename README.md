@@ -35,7 +35,7 @@ $ $JS db2bind.js -p'DB2 port' -l'DB2 location' -a'DB2 password' -i'DSN commands 
 
 ## sql.js
 ### Overview
-SQL JDBC command line client for DB2 for z/OS. Support data exporting in CSV format.
+SQL JDBC command line client for DB2 for z/OS. Supports data exporting in CSV format.
 ### Dependencies
  - [IBM DB2 JDBC driver] and license.
  - [Rhino].
